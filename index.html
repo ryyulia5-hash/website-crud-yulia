@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buku Yulia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Form Buku</h2>
+            <form id="bukuForm">
+                <div class="form-group">
+                    <label for="judul">Judul Buku</label>
+                    <input type="text" id="judul" placeholder="Contoh: Matematika Kelas 10" required>
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" required>
+                        <option value="">Pilih kategori</option>
+                        <option value="Fiksi">Fiksi</option>
+                        <option value="Non-Fiksi">Non-Fiksi</option>
+                        <option value="Pembelajaran">Pembelajaran</option> <!-- ✅ DITAMBAHKAN -->
+                        <option value="Anak">Anak & Remaja</option>
+                        <option value="Agama">Agama & Spiritual</option>
+                        <option value="Bisnis">Bisnis & Ekonomi</option>
+                        <option value="Komik">Komik & Grafis</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stok">Stok</label>
+                    <input type="number" id="stok" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="harga">Harga (Rp)</label>
+                    <input type="number" id="harga" min="0" placeholder="Contoh: 75000" required>
+                </div>
+                <button type="submit" class="btn-save">Simpan</button>
+            </form>
+        </div>
+
+        <div class="data-section">
+            <h2>Data Buku</h2>
+            <table id="bukuTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Kategori</th>
+                        <th>Stok</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="bukuList">
+                    <!-- Diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
